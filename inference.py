@@ -21,7 +21,10 @@ step=37450
 lora_path = f"./{dataset_name}/checkpoint-{step}/pytorch_lora_weights.safetensors"  
 
 # 학습에 사용된 CLIP 모델 로드
-clip_model_path = "Bingsu/clip-vit-large-patch14-ko"
+## 한국어 프롬프트
+## clip_model_path = "Bingsu/clip-vit-large-patch14-ko"
+## 영어 프롬프트
+clip_model_path = "openai/clip-vit-large-patch14"
 text_encoder = CLIPTextModel.from_pretrained(
     clip_model_path,
     cache_dir='caches'
